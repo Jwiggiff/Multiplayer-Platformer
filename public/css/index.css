@@ -1,0 +1,28 @@
+/* Josh Friedman 2018-08-21 */
+
+* {
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  font-family: 'Baloo Bhai', cursive;
+  font-size: 50px;
+}
+
+html, body {
+  height:100%;
+  width:100%;
+}
+
+body {
+  align-content:space-around;
+  background-color:#202830;
+  color:#ffffff;
+  display:grid;
+  justify-content:center;
+}
+
+canvas {
+  box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
+  background-color:#ffffff;
+
+}

@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "multiplayer_platformer",
+  "version": "1.0.0",
+  "description": "A multiplayer platformer game.",
+  "main": "server.js",
+  "author": "Josh Friedman",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3",
+    "socket.io": "^2.1.1"
+  }
+}
