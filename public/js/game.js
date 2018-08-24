@@ -42,12 +42,6 @@ function setup() {
   player = new Player();
   obstacles[0] = new Obstacle(player.pos.x+width-50);
 
-  socket.on('newPlayer', function(data) {
-    console.log('newPlayer event received');
-    data.sprite = player1;
-    players[data.id] = data;
-  });
-
   socket.on('playerUpdate', function(data) {
     //console.log('playerUpdate event received');
     if (typeof players[data.id] == "undefined") {
@@ -57,6 +51,10 @@ function setup() {
       players[data.id].x = data.x;
       players[data.id].y = data.y;
     }
+  });
+
+  socket.on('playerLeft', function(id) {
+    delete players[id];
   });
 
   /*
@@ -75,7 +73,6 @@ function setup() {
     width: player.width,
     height: player.height
   };
-  //socket.emit('newPlayer', simplePlayer);
 }
 
 function keyPressed() {
