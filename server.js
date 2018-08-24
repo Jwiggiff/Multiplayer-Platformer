@@ -18,7 +18,7 @@ io.on('connection', function(socket) {
   });
 
   socket.on('disconnect', function(reason) {
-    console.log('Socket ' + socket.id + ' disconnected!);
+    console.log('Socket ' + socket.id + ' disconnected!');
     socket.broadcast.emit('playerLeft', socket.id);
   });
 });
